@@ -1,6 +1,9 @@
+//Write A Program To Print Hollow Rectangle Using “*” In Java
+package CodeChallenge1;
+
 import java.util.Scanner;
 
-public class patterns2 {
+public class hollowRect {
 
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
