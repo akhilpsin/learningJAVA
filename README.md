@@ -1,2 +1,2 @@
 # learningJAVA
-This repo is use dto store all the core java code for learning purpose.
+This repo is used to store all the core java code for learning purposes.
