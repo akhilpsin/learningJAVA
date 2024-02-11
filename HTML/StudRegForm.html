@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration Form</title>
+  <style>
+    body {
+      background: linear-gradient(to bottom, #761b1b, #5b5656, #26a6cd);
+      color: white;
+    }
+
+    td.gradient-cell {
+      background-image: linear-gradient(to bottom, #761b1b, #5b5656, #26a6cd);
+      background-size: 100% 100%;
+    }
+
+    .form-container {
+      display: grid;
+      place-items: center;
+      /* Centers items both horizontally and vertically */
+    }
+  </style>
+</head>
+
+<body>
+  <h2>
+    <center><u>Student Registration Form</u></center>
+  </h2>
+  <div class="form-container">
+    <form action="/submit" method="post">
+      <table>
+        <tbody>
+          <tr>
+            <td><label for="fname">First Name</label></td>
+            <td><input type="text" id="fname" name="fname" required> (Max 50 character allowed)</td>
+          </tr>
+
+          <tr>
+            <td><label for="lname">Last Name</label></td>
+            <td><input type="text" id="lname" name="lname" required> (Max 50 character allowed)</td>
+          </tr>
+
+          <tr>
+            <td><label for="email">Email ID</label></td>
+            <td><input type="email" id="email" name="email" required></td>
+          </tr>
+
+          <tr>
+            <td><label for="mobile">Mobile Number</label></td>
+            <td><input type="tel" id="mobile" name="mobile" required> (10 digits allowed)</td>
+          </tr>
+
+          <tr>
+            <td> <label for="gender">Gender: </label></td>
+            <td><label for="male">Male</label>
+              <input type="radio" id="male" name="gender" value="male">
+              <label for="female">Female</label>
+              <input type="radio" id="female" name="gender" value="female">
+              <label for="other">Other</label>
+              <input type="radio" id="other" name="gender" value="other">
+            </td>
+          </tr>
+
+          <tr>
+            <td><label for="DOB">Date of Birth (DOB)</label></td>
+            <td><select name="day">
+                <option value="" disabled selected>DAY</option>
+              </select>
+
+              <select name="month">
+                <option value="" disabled selected>MONTH</option>
+              </select>
+
+              <select name="year">
+                <option value="" disabled selected>YEAR</option>
+              </select>
+            </td>
+          </tr>
+
+          <tr>
+            <td><label for="Address">Address</label></td>
+            <td><textarea name="address" id="address" rows="5" required></textarea></td>
+          </tr>
+
+          <tr>
+            <td><label for="city">City</label></td>
+            <td><input type="text" id="city" name="city" required></td>
+          </tr>
+
+          <tr>
+            <td><label for="pin">PIN Code</label></td>
+            <td><input type="text" id="pin" name="pin" required></td>
+          </tr>
+
+          <tr>
+            <td><label for="state">State</label></td>
+            <td><input type="text" id="state" name="state" required></td>
+          </tr>
+
+          <tr>
+            <td><label for="country">Country</label></td>
+            <td><input type="text" id="country" name="Country" required></td>
+          </tr>
+
+          <tr>
+            <td><label for="Hobbies">Hobbies</label></td>
+            <td><label for="travelling">Travelling</label>
+              <input type="checkbox" id="travelling" name="hobbies[]" value="travelling">
+              <label for="singing">Singing</label>
+              <input type="checkbox" id="singing" name="hobbies[]" value="singing">
+              <label for="dancing">Dancing</label>
+              <input type="checkbox" id="dancing" name="hobbies[]" value="dancing">
+              <label for="cooking">Cooking</label>
+              <input type="checkbox" id="cooking" name="hobbies[]" value="cooking">
+              <label for="others">Others:</label>
+              <input type="text" id="others" name="other_hobbies">
+            </td>
+          </tr>
+
+          <tr>
+            <td><label for="Qualification">Qualification</label></td>
+            <td class="gradient-cell">
+              <div class="body2Table"></div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>S.No</th>
+                    <th>Examination</th>
+                    <th>Board</th>
+                    <th>Percentage</th>
+                    <th>Year</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Class X</td>
+                    <td><input type="text" name="qualification[1][board]"></td>
+                    <td><input type="text" name="qualification[1][percentage]"></td>
+                    <td><input type="text" name="qualification[1][year]"></td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Class XII</td>
+                    <td><input type="text" name="qualification[2][board]"></td>
+                    <td><input type="text" name="qualification[2][percentage]"></td>
+                    <td><input type="text" name="qualification[2][year]"></td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Gradution (UG)</td>
+                    <td><input type="text" name="qualification[3][board]"></td>
+                    <td><input type="text" name="qualification[3][percentage]"></td>
+                    <td><input type="text" name="qualification[3][year]"></td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>Masters (PG)</td>
+                    <td><input type="text" name="qualification[4][board]"></td>
+                    <td><input type="text" name="qualification[4][percentage]"></td>
+                    <td><input type="text" name="qualification[4][year]"></td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>PHD</td>
+                    <td><input type="text" name="qualification[5][board]"></td>
+                    <td><input type="text" name="qualification[5][percentage]"></td>
+                    <td><input type="text" name="qualification[5][year]"></td>
+                  </tr>
+                </tbody>
+              </table>
+  </div>
+  </td>
+  </tr>
+
+  <tr>
+    <td><label for="Coursess">Coursess Available</label></td>
+    <td>
+      <input type="radio" id="Diploma in Fine Arts" name="Coursess" value="Diploma in Fine Arts">
+      <label for="Diploma in Fine Arts">Diploma in Fine Arts</label>
+      <br>
+      <input type="radio" id="Electrical engineering" name="Coursess" value="Electrical engineering">
+      <label for="Electrical engineering">Electrical engineering</label>
+      <br>
+      <input type="radio" id="Diploma in Education" name="Coursess" value="Diploma in Education">
+      <label for="Diploma in Education">Diploma in Education</label>
+    </td>
+  </tr>
+
+  </tbody>
+  </table>
+  </form>
+  </div>
+
+</body>
+
+<script>
+  // Access the dropdown elements
+  var daySelect = document.querySelector("select[name='day']");
+  var monthSelect = document.querySelector("select[name='month']");
+  var yearSelect = document.querySelector("select[name='year']");
+
+  const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+  // For loops for DAY, MONTH AND YEAR
+  for (var i = 1; i <= 30; i++) {
+    var Dayoption = document.createElement("option");
+    Dayoption.value = i;
+    Dayoption.text = i;
+    daySelect.appendChild(Dayoption);
+  }
+
+  for (var i = 0; i < 12; i++) {
+    var monthoption = document.createElement("option");
+    monthoption.value = months[i];
+    monthoption.text = months[i];
+    monthSelect.appendChild(monthoption);
+  }
+
+  for (var i = 1980; i < 2024; i++) {
+    var yearoption = document.createElement("option");
+    yearoption.value = i;
+    yearoption.text = i;
+    yearSelect.appendChild(yearoption);
+  }
+
+</script>
+
+</html>

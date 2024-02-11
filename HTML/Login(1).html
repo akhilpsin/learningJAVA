@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #540bc1;
+      background-image: url("https://static.vecteezy.com/system/resources/previews/000/210/797/original/vector-purple-landscape-illustration.jpg");
+      background-size: 100%;
+
+    }
+
+    .login-box {
+      width: 800px;
+      height: 355px;
+      /* Wider box */
+
+      margin: 50px auto;
+      border-radius: 5px;
+      background-color: rgba(255, 255, 255, 0.7);
+      box-shadow: 0 0 10px rgba(153, 73, 73, 0.15);
+      display: flex;
+      /* Create two sections */
+    }
+
+    .left-section {
+      width: 40%;
+      padding-right: 30px;
+      padding-left: 30px;
+      padding-top: 40px;
+      background-color: #030363;
+    }
+
+    .right-section {
+      width: 60%;
+      padding-right: 30px;
+      padding-left: 30px;
+      padding-top: 30px;
+      background-color: rgb(197, 195, 195);
+    }
+
+    .heading-container {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    button {
+      padding: 8px 10px;
+      margin: 8px 0;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .remember-me {
+      display: flex;
+      justify-content: space-between;
+      /* Align items to left and right */
+      align-items: center;
+      /* Vertically center items */
+    }
+
+    .social-login {
+      text-align: right;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .logo-container {
+      text-align: left;
+      margin-bottom: 10px;
+    }
+
+    .logo-container img {
+      max-width: 100%;
+    }
+
+    .buttons-container {
+      display: flex;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="login-box">
+    <div class="left-section">
+      <form action="/login">
+        <div class="logo-container">
+          <img
+            src="https://user-images.githubusercontent.com/69071769/189793968-d7e23a06-7e96-4bab-97fb-3a796db10ce0.png"
+            alt="Company Logo">
+        </div>
+        <p> </p>
+        <p> </p>
+        <nobr style="color: white;font-size: 14px;padding: 10px;">Login using social media to get quick access</nobr>
+        <p> </p>
+        <p> </p>
+        <a href="#"><button style="background-color:#DB4437;color: white;">Login with Google</button></a>
+        <a href="#"><button style="background-color:#1DA1F2;color: white;">Login with Twitter</button></a>
+        <a href="#"><button style="background-color:#0165E1;color: white;">Login with Facebook</button></a>
+      </form>
+    </div>
+
+    <div class="right-section">
+      <form action="/login">
+        <h2>
+          <center>Login to your account</center>
+        </h2>
+        <p>
+          <center>Don't have an account? <a href="#">Sign Up Free!</a></center>
+        </p>
+        <div class="form-group">
+          <input type="text" id="username" placeholder="Email address" required>
+        </div>
+        <div class="form-group">
+          <input type="password" id="password" placeholder="Enter password" required>
+        </div>
+        <div class="remember-me">
+          <div class="remember-me-checkbox">
+            <input type="checkbox" id="remember-me">
+            <label for="remember-me">Remember me</label>
+          </div>
+          <div class="social-login">
+            <a href="#">Forgot Password?</a>
+          </div>
+        </div>
+
+        <button type="submit" style="background-color:#4285F4;color: white;border: 2px solid darkblue;">Login</button>
+      </form>
+
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+      background-image: url("https://worldanimalfoundation.org/wp-content/uploads/2023/09/Cute-dogs.jpg");
+    }
+
+    .login-box {
+      width: 300px;
+      padding: 20px;
+      margin: 50px auto;
+      border-radius: 5px;
+      background-color: rgba(255, 255, 255, 0.7);
+      /* Add transparency */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .heading-container {
+      display: flex;
+      justify-content: space-between;
+      /* Align headings to left and right */
+      margin-bottom: 20px;
+      /* Add some space below the headings */
+    }
+
+    .login-heading {
+      color: #6d28d9;
+      /* Set purple color for "LOGIN" */
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #6d28d9;
+      /* Set purple color */
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: 2px solid #cc80ff;
+      cursor: pointer;
+      width: 100%;
+      border-radius: 50px;
+      /* Add curved edges */
+    }
+
+    .remember-me {
+      margin-bottom: 15px;
+    }
+
+    .social-login {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    a {
+      color: #6d28d9;
+      text-decoration: none;
+    }
+
+    .logo-container {
+      text-align: center;
+      /* Center the logo horizontally */
+      margin-bottom: 20px;
+      /* Add space below the logo */
+    }
+
+    .logo-container img {
+      max-width: 25%;
+      /* Prevent image from exceeding container width */
+      height: 10%;
+      /* Maintain aspect ratio */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="login-box">
+
+    <div class="logo-container">
+      <img
+        src="https://png.pngtree.com/png-vector/20191125/ourmid/pngtree-beautiful-admin-roles-line-vector-icon-png-image_2035379.jpg"
+        alt="Your Logo">
+
+    </div>
+
+    <div class="heading-container">
+      <h1 class="login-heading">LOGIN</h1>
+      <h1>SIGNUP</h1>
+    </div>
+
+    <form action="#">
+      <input type="text" placeholder="Username" required>
+      <input type="password" placeholder="Password" required>
+      <div class="remember-me">
+        <input type="checkbox" id="Remember me">
+        <label for="remember-me">Remember me</label>
+      </div>
+      <button type="submit">Login</button>
+    </form>
+
+    <div class="social-login">
+      <a href="#">Forgot Password? </a>
+    </div>
+
+  </div>
+</body>
+
+</html>
